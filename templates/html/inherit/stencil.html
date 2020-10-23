@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}title{% endblock %}</title>
+</head>
+<body>
+
+<div style="background-color: olivedrab;color: black;width: 100px;height: 200px">
+    {% block content %}
+        <li>默认的内容</li>
+    {% endblock %}
+</div>
+<div style="background-color: olivedrab;color: black;width: 200px;height: 100px">
+    {% block father %}
+        This is father
+    {% endblock %}
+</div>
+</body>
+</html>

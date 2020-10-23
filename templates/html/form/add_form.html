@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add_form</title>
+</head>
+<body>
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <label>
+            <input type="submit" value="提交">
+        </label>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% load custom_filter_zero %}{#导入一模一样的文件名#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+    <style>
+        .demo{
+            list-style: none;
+            width:500px;
+            height:100px;
+            background-color: olivedrab;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>自定义过滤器</h1>
+    {{ 'hello'|my_upper }}<br>{{ 'HELLO'|my_lower }}<br>{{ ts|my_cut_zero:' ' }}
+    <h1>自定义标签</h1>
+{#    <li>{% show_name '类似于URL使用' %}</li>#}
+{#    <li>{% show_name 'inherit' %}</li>#}
+    <li>{% current_time '%Y-%m-%d %H:%M:%S' %}</li>
+    <li>{% current_time_0 %}</li>
+
+{#    <li>{% current_time_1 '%Y-%m-%d %H:%M:%S' %}</li>#}
+    <h1>自定义标签使用</h1>
+<ul>
+    {% for i in choices %}
+{#        {{ new }}#}
+        <li>{{ i }}</li>
+{#        {% new_tags i %}#}
+    {% endfor %}
+{#    <li>{% stags person person1 %}</li>#}
+</ul>
+
+
+
+</div>
+</body>
+</html>

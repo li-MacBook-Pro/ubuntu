@@ -1,0 +1,18 @@
+{% extends 'html/inherit/stencil.html' %}
+
+{% block title %}
+    music label
+{% endblock %}
+
+{% block content %}
+    <div style="color: green;background-color: green">music content</div>
+    <iframe src="https://www.baidu.com"></iframe>
+{% endblock %}
+
+{% block father %}
+    inherit father:{{ block.super }}<br>
+    This is son<br>
+    {% block grangson %}
+        I Like Computer and artificial intelligence
+    {% endblock %}
+{% endblock %}
