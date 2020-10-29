@@ -29,10 +29,12 @@ urlpatterns = [
     # path('login/', views.login1, name='login'),
     # path('logout/', views.logout1, name='logout'),
 
-    path('add_form/', views.add_form, name='add_form'),
-    path('register/', views.register, name='register'),
-    path('login1/', views.LoginView.as_view(), name='login1'),
+    # path('add_form/', views.add_form, name='add_form'),
+    # path('register/', views.register, name='register'),
+    # path('login1/', views.LoginView.as_view(), name='login1'),
 
     path('', views.T_demo.as_view(), name='li'),
+
+    path('numpy/', views.numpy_.as_view(), name='numpy'),
 
 ]

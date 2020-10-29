@@ -473,3 +473,8 @@ class T_demo(View):
         }
 
         return render(request, 'html/xpath/xpath.html', context)
+
+
+class numpy_(View):
+    def get(self, request):
+        return render(request, 'html/numpy_/numpy_.html')
